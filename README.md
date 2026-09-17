@@ -1,41 +1,27 @@
-# Missio — matching intérim
+Missio — Temporary Staffing Matching
 
-Application de matching entre employeurs et intérimaires, à base de swipe.
+A swipe-based matching application connecting employers with temporary workers.
 
-- **Espace employeur** : dépose des annonces (rémunération, temps de travail, période, localisation) et consulte les intérimaires qui ont matché.
-- **Espace intérimaire** : définit ses critères de recherche, puis swipe les annonces (gauche = passer, droite = matcher).
+Employer space: post job listings (pay, working hours, period, location) and view the temporary workers who have matched with their listings.
+Temporary worker space: define their search criteria, then swipe through job listings (left = skip, right = match).
 
-Stack : React (Vite) + Python (FastAPI) + SQLite.
+Tech stack: React (Vite) + Python (FastAPI) + SQLite.
 
-## Démarrer l'application
-
-```bash
+Starting the Application
 ./start.sh
-```
 
-Ce script installe les dépendances si nécessaire, initialise la base avec des données de démo au premier lancement, puis démarre :
+This script installs the dependencies if necessary, initializes the database with demo data on the first launch, and then starts:
 
-- Le frontend : http://localhost:5173
-- Le backend (API + docs interactives) : http://localhost:8000/docs
-
-## Comptes de démonstration
-
-| Rôle | Email | Mot de passe |
-|---|---|---|
-| Employeur (Bordeaux) | employeur.bordeaux@demo.fr | demo1234 |
-| Employeur (Paris) | employeur.paris@demo.fr | demo1234 |
-| Intérimaire | interimaire@demo.fr | demo1234 |
-
-## Arrêter l'application
-
-```bash
+Frontend: http://localhost:5173
+Backend (API + interactive documentation): http://localhost:8000/docs
+Demo Accounts
+Role	Email	Password
+Employer (Bordeaux)	employeur.bordeaux@demo.fr	demo1234
+Employer (Paris)	employeur.paris@demo.fr	demo1234
+Temporary Worker	interimaire@demo.fr	demo1234
+Stopping the Application
 ./stop.sh
-```
-
-## Réinitialiser les données de démo
-
-```bash
+Resetting Demo Data
 cd backend && source .venv/bin/activate && python -m app.seed
-```
 
-⚠️ Cette commande efface toutes les données existantes.
+⚠️ This command deletes all existing data.
